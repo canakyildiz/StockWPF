@@ -1,0 +1,108 @@
+﻿<Window x:Class="StockWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StockWPF"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="380"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="MainWindow_OnMouseDown">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Border CornerRadius="10" Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FF7F7F97" Offset="0.0"/>
+                        <GradientStop Color="#FF0A2D4B" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <iconPacks:PackIconMaterial Kind="CloseThick" 
+                                            Foreground="Red"
+                                            HorizontalAlignment="Right"
+                                            Margin="0,15,26,0"
+                                            />
+            </Border>
+            <StackPanel Orientation="Vertical" Margin="246,0,0,180" Height="25" Width="200">
+                <Button Width="46" Height="25" Click="Button_Click"/>
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Center">
+            <Image Source="Images/KronosLogo.png" Width="300"/>
+            <TextBlock Text="Stok Otomasyonu"
+                       FontWeight="Light"
+                       FontFamily="Century Gothic"
+                       FontSize="18"
+                       Foreground="White"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    <TextBox FontFamily="Helvetica"
+                             FontWeight="Light"
+                             Text="Kullanıcı Adı"
+                             HorizontalAlignment="Center"
+                             Foreground="White"
+                             Background="Transparent"
+                             Width="235"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.5" 
+                             Height="25"
+                             Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="Account"
+                                                VerticalAlignment="Center"
+                                                HorizontalContentAlignment="Center"
+                                                Foreground="White"/>
+                </StackPanel>
+                <Border
+                    Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <PasswordBox FontFamily="Helvetica"
+                             FontWeight="Light"
+                             Password="Şifre"
+                             HorizontalAlignment="Center"
+                             Foreground="White"
+                             Background="Transparent"
+                             Width="235"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.5" 
+                             Height="25"
+                             Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="Key"
+                                                VerticalAlignment="Center"
+                                                HorizontalContentAlignment="Center"
+                                                Foreground="White"/>
+                </StackPanel>
+                <Border
+                    Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                    <Button Width="100" Height="25" Content="GİRİŞ" Margin="60,0,60,0"/>
+                    <Button Width="104" Height="25" Content="KAYIT OL"/>
+                </StackPanel>
+
+
+            </StackPanel>
+
+
+            
+            
+        </Grid>
+    </Grid>
+</Window>
